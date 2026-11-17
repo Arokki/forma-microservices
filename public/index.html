@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <title>FORMA — вещи для вашего пространства</title>
+  <link rel="stylesheet" href="/style.css?v=forma-live-5">
+  <script defer src="/app.js?v=forma-live-5"></script>
+</head>
+<body>
+  <div class="announcement">Продуманные вещи для дома и работы <span>·</span> Доставка по Беларуси</div>
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="#top" aria-label="FORMA, на главную">FORMA<span>.</span></a>
+      <nav class="nav" aria-label="Основная навигация"><a href="#catalog">Каталог</a><a href="#architecture">Архитектура</a><a href="#delivery">Доставка и оплата</a></nav>
+      <div class="header-actions"><button id="search-toggle" class="icon-button" aria-label="Открыть поиск"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><button id="cart-toggle" class="cart-button" aria-label="Открыть корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16l-1.4 13H5.4L4 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Корзина</span><b id="cart-count">0</b></button></div>
+    </div>
+    <div id="search-panel" class="search-panel" hidden><label for="search-input">Поиск по каталогу</label><input id="search-input" type="search" placeholder="Что вы ищете?" autocomplete="off"><button id="search-close" aria-label="Закрыть поиск">×</button></div>
+  </header>
+  <main id="top">
+    <section class="hero"><div class="hero-copy"><span class="kicker">КОЛЛЕКЦИЯ ДЛЯ КАЖДОГО ДНЯ</span><h1>Удобство<br>в каждой <em>детали.</em></h1><p>Находите любимые вещи для рабочего места, дома и моментов, которые хочется продлить.</p><a class="button button-dark" href="#catalog">Смотреть каталог <span>↗</span></a><div class="hero-meta"><span>FORMA</span><span class="hero-line"></span><span>Вещи с характером</span></div></div><div class="hero-system">
+      <div class="hero-system-head"><span>РАБОТА МАГАЗИНА</span><span class="live-label"><i></i> Статусы API</span></div>
+      <div class="system-grid">
+        <a href="#architecture"><small>01 · ПРИЁМ ЗАПРОСОВ</small><strong>API-шлюз</strong><span class="service-state" data-health="gateway">Проверяем</span></a>
+        <a href="#architecture"><small>02 · ТОВАРЫ И ОСТАТКИ</small><strong>Каталог</strong><span class="service-state" data-health="catalog">Проверяем</span></a>
+        <a href="#architecture"><small>03 · ОФОРМЛЕНИЕ</small><strong>Заказы</strong><span class="service-state" data-health="orders">Проверяем</span></a>
+        <a href="#architecture"><small>04 · ЖУРНАЛ ЗАКАЗОВ</small><strong>Уведомления</strong><span class="service-state" data-health="notifications">Проверяем</span></a>
+      </div>
+      <a class="system-link" href="#architecture">Посмотреть схему запросов <span>↗</span></a>
+    </div></section>
+    <section class="catalog section" id="catalog"><div class="section-top"><div><span class="kicker">НАШ АССОРТИМЕНТ</span><h2>Найдите своё</h2><p>Функциональные вещи, к которым приятно возвращаться.</p></div><span id="result-count" class="result-count"></span></div><div id="category-filters" class="filters" role="group" aria-label="Категории товаров"></div><div id="products" class="product-grid"></div><div id="catalog-error" class="catalog-error" hidden>Каталог временно недоступен. Попробуйте обновить страницу позже.</div></section>
+    <section class="story" id="about"><div class="story-shape" aria-hidden="true"><span>F.</span></div><div class="story-copy"><span class="kicker">ФИЛОСОФИЯ FORMA</span><h2>Пространство,<br>в котором вам хорошо.</h2><p>Мы собрали товары, которые помогают сделать повседневные дела приятнее: от рабочего стола до уютного вечера дома.</p><a href="#catalog">Перейти к товарам <span>↗</span></a></div></section>
+    <section class="delivery section" id="delivery"><div class="section-top"><div><span class="kicker">ПОКУПАТЕЛЯМ</span><h2>Доставка и оплата</h2></div></div><div class="info-grid"><article><span class="info-icon">⌁</span><h3>Доставка</h3><p>Оформите заказ, указав адрес в Беларуси. Контактный телефон сохраняется в заказе для согласования деталей доставки.</p></article><article><span class="info-icon">◇</span><h3>Оплата при получении</h3><p>Оплатите заказ при получении. Итоговая стоимость товаров будет показана до подтверждения заказа.</p></article><article><span class="info-icon">✉</span><h3>Подтверждение заказа</h3><p>После оформления на экране появится номер заказа. Сохраните его для обращения по вашему заказу.</p></article></div></section>
+    <section class="section architecture-section" id="architecture">
+      <div class="architecture-board">
+        <div class="architecture-head">
+          <div><span class="kicker">УСТРОЙСТВО FORMA</span><h2>Архитектура магазина</h2><p>Шлюз принимает запросы браузера. Каждый сервис работает в своём процессе и хранит свои данные.</p></div>
+          <button id="refresh-services" type="button">Обновить статусы</button>
+        </div>
+        <p id="service-summary" role="status">Проверяем доступность сервисов…</p>
+        <div class="architecture-entry">
+          <div class="architecture-card"><small>КЛИЕНТ</small><h3>Браузер</h3><p>Каталог, корзина, оформление</p></div>
+          <span class="architecture-arrow" aria-hidden="true">→</span>
+          <div class="architecture-card"><small>ТОЧКА ВХОДА</small><h3>API-шлюз</h3><p>Маршрутизация HTTP-запросов</p><span class="service-state" data-health="gateway">Проверяем</span></div>
+        </div>
+        <div class="architecture-route"><span>↓ GET /api/products</span><span>↓ POST /api/orders</span></div>
+        <div class="architecture-services">
+          <div class="architecture-card"><small>СЕРВИС 01</small><h3>Каталог</h3><p>Товары, цены и резервирование остатков</p><span class="service-state" data-health="catalog">Проверяем</span></div>
+          <div class="architecture-card"><small>СЕРВИС 02</small><h3>Заказы</h3><p>Контакты, адрес доставки и номер заказа</p><span class="service-state" data-health="orders">Проверяем</span></div>
+          <div class="architecture-card"><small>СЕРВИС 03</small><h3>Уведомления</h3><p>Внутренний журнал принятых заказов</p><span class="service-state" data-health="notifications">Проверяем</span></div>
+        </div>
+        <div class="lab-controls"><h3>Управление доступностью</h3><p>Кнопка отключает обработку запросов сервиса (HTTP 503). Процесс остаётся запущенным.</p><div id="service-controls"></div><p id="control-message" role="status"></p><h3>Журнал прохождения запросов</h3><p>Добавьте товар и оформите заказ. Одинаковый trace связывает точки одного запроса.</p><div id="request-log" aria-live="off"></div></div><div id="order-trace" class="architecture-flow" hidden></div><div class="architecture-flow"><h3>Что происходит при заказе</h3><ol><li>Шлюз передаёт запрос сервису заказов.</li><li>Сервис заказов резервирует товары в каталоге.</li><li>Сервис заказов сохраняет заказ и передаёт событие сервису уведомлений по HTTP.</li><li>Покупатель получает номер заказа.</li></ol></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="footer-main"><div><a class="logo" href="#top">FORMA<span>.</span></a><p>Вещи для вашего пространства.</p></div><div><strong>Покупателям</strong><a href="#catalog">Каталог</a><a href="#delivery">Доставка и оплата</a></div><div><strong>Информация</strong><a href="#about">О магазине</a><a href="#top">На главную</a></div></div><div class="footer-bottom"><span>© 2026 FORMA</span><span>Сделано с вниманием к деталям.</span></div></footer>
+  <div id="overlay" class="overlay" hidden></div>
+  <aside id="cart-drawer" class="drawer" aria-label="Корзина" aria-hidden="true"><div class="drawer-head"><div><span class="kicker">ВАШИ ПОКУПКИ</span><h2 id="drawer-title">Корзина</h2></div><button class="close-button" id="cart-close" aria-label="Закрыть корзину">×</button></div><div id="cart-view" class="drawer-view"><div id="cart-items" class="cart-items"></div><div class="drawer-bottom"><div class="total-line"><span>Итого</span><strong id="cart-total">0 BYN</strong></div><p>Стоимость доставки согласовывается после оформления заказа.</p><button class="button button-dark full" id="checkout-open">Оформить заказ <span>→</span></button></div></div><div id="checkout-view" class="drawer-view" hidden><button class="back-button" id="checkout-back">← Вернуться в корзину</button><form id="checkout-form"><label>Имя и фамилия <span>*</span><input name="customer" required minlength="2" maxlength="80" autocomplete="name" placeholder="Как к вам обращаться"></label><label>Телефон <span>*</span><input name="phone" type="tel" required minlength="7" maxlength="22" autocomplete="tel" placeholder="+375 29 123 45 67"></label><label>Email <span>*</span><input name="email" type="email" required maxlength="120" autocomplete="email" placeholder="name@example.com"></label><div class="form-row"><label>Город <span>*</span><input name="city" required minlength="2" maxlength="80" autocomplete="address-level2" placeholder="Минск"></label><label>Индекс<input name="postalCode" maxlength="12" autocomplete="postal-code" placeholder="220000"></label></div><label>Адрес доставки <span>*</span><input name="address" required minlength="5" maxlength="200" autocomplete="street-address" placeholder="Улица, дом, квартира"></label><div class="payment-option"><span class="payment-radio"></span><div><strong>Оплата при получении</strong><small>Другие способы оплаты пока недоступны</small></div></div><div class="total-line"><span>Товары</span><strong id="checkout-total">0 BYN</strong></div><button class="button button-dark full" id="place-order" type="submit">Подтвердить заказ <span>→</span></button><p class="form-note">Контактные данные используются для обработки вашего заказа.</p><p id="checkout-error" class="checkout-error" role="alert"></p></form></div></aside>
+  <div id="confirmation" class="confirmation" role="dialog" aria-modal="true" aria-labelledby="confirmation-title" hidden><button class="close-button" id="confirmation-close" aria-label="Закрыть">×</button><div class="success-icon">✓</div><span class="kicker">ЗАКАЗ ОФОРМЛЕН</span><h2 id="confirmation-title">Спасибо за покупку!</h2><p>Ваш заказ принят. Сохраните его номер для обращения по доставке.</p><div class="order-number">Номер заказа <strong id="confirmed-id"></strong></div><a class="confirmation-trace" id="confirmation-trace" href="#architecture">Посмотреть путь заказа ↗</a><button class="button button-dark full" id="continue-shopping">Продолжить покупки</button></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
