@@ -1,0 +1,22 @@
+[
+  {
+    "id": "8f5033a6-cb6b-459c-943f-ca4392c38c3f",
+    "orderId": "09e10c18-49ed-4574-b379-14b3d222c5c2",
+    "email": "staskon06@gmail.com",
+    "message": "Заказ 09e10c18 принят на сумму 189 BYN",
+    "channel": "demo-email",
+    "status": "recorded",
+    "createdAt": "2026-11-17T16:11:52.013Z",
+    "traceId": "93109c13-da01-4010-99e4-8cb14c0ed274"
+  },
+  {
+    "id": "0ff09d20-aed7-4bb4-b7a8-3b6787785bb2",
+    "orderId": "0245fc3b-52b2-4242-948b-394f5a427e37",
+    "email": "staskon06@gmail.com",
+    "message": "Заказ 0245fc3b принят на сумму 189 BYN",
+    "channel": "demo-email",
+    "status": "recorded",
+    "createdAt": "2026-11-17T15:14:52.507Z",
+    "traceId": "f31f9b5b-85a7-490d-97dd-7f58eb6dad7c"
+  }
+]

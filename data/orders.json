@@ -1,0 +1,43 @@
+[
+  {
+    "id": "09e10c18-49ed-4574-b379-14b3d222c5c2",
+    "customer": "Станислав Кондратович Дмитриевич",
+    "email": "staskon06@gmail.com",
+    "phone": "+375445943670",
+    "city": "Минск",
+    "address": "Ул. Язепа Дроздовича 6-96",
+    "postalCode": "",
+    "paymentMethod": "cash_on_delivery",
+    "items": [
+      {
+        "id": "p3",
+        "name": "Беспроводные наушники",
+        "quantity": 1,
+        "price": 189
+      }
+    ],
+    "total": 189,
+    "status": "accepted",
+    "notificationStatus": "recorded",
+    "createdAt": "2026-11-17T16:11:52.000Z",
+    "traceId": "93109c13-da01-4010-99e4-8cb14c0ed274"
+  },
+  {
+    "id": "0245fc3b-52b2-4242-948b-394f5a427e37",
+    "customer": "Тигеран",
+    "email": "staskon06@gmail.com",
+    "items": [
+      {
+        "id": "p3",
+        "name": "Беспроводные наушники",
+        "quantity": 1,
+        "price": 189
+      }
+    ],
+    "total": 189,
+    "status": "accepted",
+    "notificationStatus": "recorded",
+    "createdAt": "2026-11-17T15:14:52.494Z",
+    "traceId": "f31f9b5b-85a7-490d-97dd-7f58eb6dad7c"
+  }
+]
